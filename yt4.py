@@ -2,7 +2,7 @@ import re
 from datetime import timedelta
 from googleapiclient.discovery import build
 
-api_key = 'AIzaSyBTDWub19PdvkXNaclH6FxiJq3iWRCrC_w'
+api_key = '#your API key'
 
 youtube = build('youtube', 'v3', developerKey=api_key)
 
@@ -17,7 +17,7 @@ nextPageToken = None
 while True:
     pl_request = youtube.playlistItems().list(
         part='contentDetails',
-        playlistId="PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+        playlistId="#your playlist address",
         maxResults=50,
         pageToken=nextPageToken
     )
